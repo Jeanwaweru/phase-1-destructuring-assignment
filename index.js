@@ -1,7 +1,34 @@
 const farmAnimals = 'cow horse sheep pig chicken';
+const [cowSound, horseSound, sheepSound, pigSound, chickenSound] = farmAnimals.split(' ');
+console.log(cowSound, horseSound, sheepSound, pigSound, chickenSound); 
 
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const [bessie, , , dolly, babe, little] = farmAnimals.split(' ');
+console.log(bessie, dolly, babe, little); 
 
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet' , 'blackAndWhite','black', 'pink'];
+const [] = farmAnimals.split(' ').slice(0, 3);
+console.log(blackAndWhite, black, pink); 
+
+const [blackAndWhite, black, white, green] = farmAnimals.split(' ').map(animal => {
+  switch (animal) {
+    case 'cow':
+      return 'blackAndWhite';
+    case 'horse':
+      return 'black';
+    case 'sheep':
+      return 'white';
+    case 'pig':
+      return 'pink';
+    default:
+      return animal;
+  }
+});
+console.log(blackAndWhite, black, white, green); 
+const [c, h, s, p] = farmAnimals.split(' ');
+console.log(c, h, s, p); 
+
+const [b, d, ba, l, , , indg] = 'red orange yellow green blue indigo violet'.split(' ');
+console.log(c, h, s, p, indg); 
 const muppet = {
   muppetName: 'Miss Piggy',
   color: 'pink',
@@ -24,6 +51,9 @@ const nestedMuppet = {
   nestedJob: 'Host of The Muppet Show',
   nestedPartner: 'Miss Piggy'
 };
+
+const { muppetName, color, song, job, partner } = muppet;
+console.log(muppetName, color, song, job, partner);
 
 // Strings
 
